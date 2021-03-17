@@ -8,9 +8,14 @@
 
   --white: #fff;
   --gray: rgb(88, 88, 88);
+  --gray03opacity: rgba(88, 88, 88, 0.3);
+  --gray05opacity: rgba(88, 88, 88, 0.5);
   --pink: #f2849e;
   --text-color: #585858;
+  --body-bg: rgba(255, 255, 255, 1);
+  --footer-bg: rgba(246, 246, 246, 1);
 
+  /* Images */
   --color1: #6a59d699;
   --color2: #eb2d1899;
   --color3: #0caf6c99;
@@ -31,8 +36,8 @@
 }
 
 body {
-  background-color: var(--white);
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  background-color: var(--body-bg);
 }
 
 
@@ -48,7 +53,7 @@ a {
 .anchor-border-bottom::after {
   content: '.....................................................................................';
   position: absolute;
-  bottom: 0.1rem;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 0.2rem;
@@ -214,7 +219,7 @@ main section.grid article .background::before {
   height: 0.2rem;
   transform: translate(-50%, -50%) rotate(42.5deg);
   background-color: #ffffff22;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.4s ease;
 }
 
 main section.grid article .background::before {
@@ -269,4 +274,178 @@ main section.grid article .background p {
   line-height: 2.8rem;
   color: white;
   text-align: center;
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 11.3rem;
+  padding: 9.3rem 0 12.2rem;
+  background-color: var(--footer-bg);
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: calc(70% - 9.2rem) 30%;
+  gap: 9.2rem;
+}
+
+footer section h2 {
+  color: var(--gray);
+  font-size: 2.05rem;
+  font-weight: 900;
+  letter-spacing: 0.71rem;
+  text-transform: uppercase;
+  margin-bottom: 4.1rem;
+}
+
+section.form .double-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8rem;
+}
+
+section.form .input-field input,
+section.form .textarea-field textarea {
+  height: 5.6rem;
+  background-color: transparent;
+  border: 0;
+}
+
+section.form .textarea-field textarea {
+  height: 7rem;
+}
+
+section.form .input-field,
+section.form .textarea-field {
+  position: relative;
+}
+
+section.form .input-field,
+section.form .textarea-field,
+section.form .line-focus {
+  width: 100%;
+}
+
+section.form .input-field input,
+section.form .textarea-field textarea,
+section.form .input-field input::placeholder,
+section.form .textarea-field textarea::placeholder {
+  color: var(--gray);
+  font-size: 1.85rem;
+  font-weight: 300;
+  width: 100%;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+
+section.form .input-field input:focus,
+section.form .textarea-field textarea:focus {
+  outline: none;
+}
+
+section.form .input-field:first-child {
+  margin-right: 2.8rem;
+}
+
+section.form .textarea-field {
+  margin-top: 2.8rem;
+}
+
+section.form .textarea-field textarea {
+  resize: vertical;
+}
+
+section.form .line-focus {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 0;
+  height: 0.1rem;
+  background-color: var(--gray03opacity);
+  position: relative;
+}
+
+section.form .line-focus::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  background-color: var(--pink);
+  height: 0.3rem;
+  transition: 0.5s ease;
+}
+
+section.form .input-focus:focus ~ .line-focus::after {
+  width: 100%;
+}
+
+section.form .button-field {
+  margin-top: 3.7rem;
+}
+
+section.form .button-field button {
+  padding: 0 2rem 0 2.2rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background-color: var(--gray);
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 5.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+section.form .button-field button:hover {
+  background-color: var(--pink);
+}
+
+/* ===== SOCIAL ===== */
+section.social ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+section.social ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.05rem;
+  color: var(--gray);
+  padding: 0 1.3rem;
+  border: 1px solid var(--gray03opacity);
+  border-radius: 0.4rem;
+  width: 5.1rem;
+  height: 5.1rem;
+  transition: color 0.2s ease, border 0.2s ease;
+}
+
+section.social ul li a:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+}
+
+/* ===== CREDITS ===== */
+section.credits ul {
+  display: flex;
+  font-size: 1.5rem;
+  color: var(--gray05opacity);
+}
+
+section.credits ul li + li {
+  border-left: 1px solid var(--gray03opacity);
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+section.credits ul li a {
+  position: relative;
+  color: var(--gray05opacity);
+}
+
+section.credits ul li a:hover {
+  color: var(--pink);
 }
