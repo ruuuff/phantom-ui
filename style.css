@@ -1,6 +1,5 @@
 /* ===== FONTE ===== */
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900');
-
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
 /* ===== GLOBAL ===== */
 :root {
@@ -36,10 +35,9 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   background-color: var(--body-bg);
 }
-
 
 /* ===== Global Elements ===== */
 ul {
@@ -51,7 +49,7 @@ a {
 }
 
 .anchor-border-bottom::after {
-  content: '.....................................................................................';
+  content: ".....................................................................................";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -69,7 +67,6 @@ a.anchor-border-bottom:hover::after {
   color: transparent;
 }
 
-
 /* ===== NAV ===== */
 nav {
   background-color: rgba(255, 255, 255, 0.4);
@@ -77,7 +74,7 @@ nav {
   position: fixed;
   top: 3.7rem;
   right: 3.7rem;
-  z-index: 1000;
+  z-index: 100;
 }
 
 nav a {
@@ -93,7 +90,6 @@ nav a {
 nav a:hover {
   color: var(--pink);
 }
-
 
 /* ===== HEADER ===== */
 #header {
@@ -125,7 +121,6 @@ nav a:hover {
   height: 3.8rem;
   margin-right: 1.4rem;
 }
-
 
 /* ===== MAIN ===== */
 /* ===== MAIN HEADER ===== */
@@ -198,7 +193,7 @@ article .background.color3 {
 }
 
 article .background.color4 {
-background-color: var(--color4);
+  background-color: var(--color4);
 }
 
 article .background.color5 {
@@ -211,7 +206,7 @@ article .background.color6 {
 
 main section.grid article .background::after,
 main section.grid article .background::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -276,7 +271,6 @@ main section.grid article .background p {
   text-align: center;
 }
 
-
 /* ===== FOOTER ===== */
 footer {
   margin-top: 11.3rem;
@@ -335,7 +329,7 @@ section.form .textarea-field textarea::placeholder {
   font-size: 1.85rem;
   font-weight: 300;
   width: 100%;
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
 section.form .input-field input:focus,
@@ -365,7 +359,7 @@ section.form .line-focus {
 }
 
 section.form .line-focus::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
@@ -448,4 +442,96 @@ section.credits ul li a {
 
 section.credits ul li a:hover {
   color: var(--pink);
+}
+
+/* ===== MENU OVERLAY ===== */
+#menu-overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: background-color 0.5s ease, opacity 0.5s, visibility 0.5s;
+  z-index: 1000;
+}
+
+#menu-overlay.show {
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-container {
+  height: 100%;
+  width: 41rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 5.1rem;
+  background-color: var(--text-color);
+  transform: translateX(150%);
+  transition: transform 0.5s ease;
+}
+
+#menu-overlay.show .menu-container {
+  transform: translateX(0);
+}
+
+.menu {
+  position: relative;
+}
+
+.menu h2 {
+  color: var(--white);
+  font-size: 2.05rem;
+  font-weight: 900;
+  letter-spacing: 0.71rem;
+  text-transform: uppercase;
+  margin-bottom: 4.1rem;
+}
+
+.menu ul li + li {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.menu ul li a {
+  color: var(--white);
+  padding: 1.85rem 0;
+  font-size: 1.9rem;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.menu ul li a:hover {
+  color: var(--pink);
+}
+
+.menu > a {
+  position: absolute;
+  top: 1.5rem;
+  right: 125%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--gray);
+  transition: color 0.2s ease, transform 0.5s ease 0.2s;
+  transform: translate(-50%, -50%) rotate(180deg);
+  z-index: 1000;
+}
+
+#menu-overlay.show .menu > a {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.menu > a:hover {
+  color: var(--pink);
+}
+
+.menu > a span {
+  font-size: 0;
 }

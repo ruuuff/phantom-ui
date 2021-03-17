@@ -16,7 +16,7 @@
   <nav>
     <ul>
       <li>
-        <a href="#" class="fas fa-bars"></a>
+        <a href="#" class="fas fa-bars" onclick="toggleMenu()"></a>
       </li>
     </ul>
   </nav>
@@ -129,7 +129,7 @@
 
   <footer>
     <div class="container">
-      <section class="form">
+      <section class="form" id="contact">
         <h2>Get in touch</h2>
         <form>
           <div class="double-input">
@@ -155,7 +155,7 @@
         </form>
       </section>
 
-      <section class="social">
+      <section class="social" id="socials">
         <h2>Follow</h2>
         <ul>
           <li>
@@ -192,5 +192,32 @@
     </div>
   </footer>
 
+  <div id="menu-overlay">
+    <div class="menu-container">
+      <div class="menu">
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#socials">Socials</a>
+          </li>
+          <li>
+            <a href="#">Theme</a>
+          </li>
+        </ul>
+        <a href="#" class="fas fa-times" onclick="toggleMenu()"><span>Close</span></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts.js"></script>
 </body>
 </html>
