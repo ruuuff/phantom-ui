@@ -1,0 +1,272 @@
+/* ===== FONTE ===== */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900');
+
+
+/* ===== GLOBAL ===== */
+:root {
+  font-size: 62.5%;
+
+  --white: #fff;
+  --gray: rgb(88, 88, 88);
+  --pink: #f2849e;
+  --text-color: #585858;
+
+  --color1: #6a59d699;
+  --color2: #eb2d1899;
+  --color3: #0caf6c99;
+  --color4: #1de4ec99;
+  --color5: #29036699;
+  --color6: #f8267799;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: min(90%, 118rem);
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--white);
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+
+
+/* ===== Global Elements ===== */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.anchor-border-bottom::after {
+  content: '.....................................................................................';
+  position: absolute;
+  bottom: 0.1rem;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  color: gray;
+  font-size: 0.1rem;
+  line-height: 0.1rem;
+  letter-spacing: 0.1rem;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+a.anchor-border-bottom:hover::after {
+  color: transparent;
+}
+
+
+/* ===== NAV ===== */
+nav {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 0.4rem;
+  position: fixed;
+  top: 3.7rem;
+  right: 3.7rem;
+  z-index: 1000;
+}
+
+nav a {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--gray);
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+
+/* ===== HEADER ===== */
+#header {
+  padding-top: 15rem;
+}
+
+.logo {
+  margin-bottom: 4.65rem;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 18rem;
+  font-size: 1.9rem;
+  font-weight: 900;
+  letter-spacing: 0.65rem;
+  color: var(--gray);
+  transition: color 0.2s ease;
+}
+
+.logo a:hover {
+  color: var(--pink);
+}
+
+.logo img {
+  width: 3.8rem;
+  height: 3.8rem;
+  margin-right: 1.4rem;
+}
+
+
+/* ===== MAIN ===== */
+/* ===== MAIN HEADER ===== */
+main header h1 {
+  color: var(--gray);
+  font-size: 5.1rem;
+  letter-spacing: -0.17rem;
+  line-height: 6.65rem;
+  margin-bottom: 3.3rem;
+}
+
+main header h1 a {
+  color: var(--gray);
+  transition: color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+main header h1 a:hover {
+  color: var(--pink);
+}
+
+main header p {
+  font-size: 1.85rem;
+  font-weight: 300;
+  line-height: 3.25rem;
+  color: var(--text-color);
+  margin-bottom: 8rem;
+}
+
+/* ===== MAIN IMAGES ===== */
+main section.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.8rem;
+}
+
+main section.grid article {
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  height: 33.3rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+main section.grid article:hover {
+  transform: scale(1.1);
+}
+
+main section.grid article .background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+article .background.color1 {
+  background-color: var(--color1);
+}
+
+article .background.color2 {
+  background-color: var(--color2);
+}
+
+article .background.color3 {
+  background-color: var(--color3);
+}
+
+article .background.color4 {
+background-color: var(--color4);
+}
+
+article .background.color5 {
+  background-color: var(--color5);
+}
+
+article .background.color6 {
+  background-color: var(--color6);
+}
+
+main section.grid article .background::after,
+main section.grid article .background::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 0.2rem;
+  transform: translate(-50%, -50%) rotate(42.5deg);
+  background-color: #ffffff22;
+  transition: background-color 0.5s ease;
+}
+
+main section.grid article .background::before {
+  transform: translate(-50%, -50%) rotate(-42.5deg);
+}
+
+main section.grid article:hover .background {
+  background-color: rgba(33, 33, 33, 0.4);
+}
+
+main section.grid article:hover .background::after,
+main section.grid article:hover .background::before {
+  background-color: transparent;
+}
+
+main section.grid article .background h2,
+main section.grid article .background p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+main section.grid article .background h2 {
+  font-size: 2.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.71rem;
+  transform: translate(-50%, -50%);
+}
+
+main section.grid article .background p {
+  transform: translate(-50%, calc(-50% + 40px));
+  width: 90%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+main section.grid article:hover .background h2 {
+  transform: translate(-50%, calc(-50% + -20px)) scale(0.9);
+}
+
+main section.grid article:hover .background p {
+  transform: translate(-50%, calc(-50% + 20px)) scale(0.9);
+  opacity: 1;
+  visibility: visible;
+}
+
+main section.grid article .background p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  color: white;
+  text-align: center;
+}
