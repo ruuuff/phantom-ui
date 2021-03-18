@@ -13,9 +13,12 @@
   --gray015opacity: rgba(255, 255, 255, 0.15);
   --pink: #f2849e;
   --text-color: #585858;
+
   --nav-btn-bg-color: rgba(255, 255, 255, 0.4);
   --body-bg: rgba(255, 255, 255, 1);
   --footer-bg: rgba(246, 246, 246, 1);
+  --menu-bg-color: #585858;
+  --menu-text-color: #fff;
 
   /* Images */
   --color1: #6a59d699;
@@ -42,6 +45,7 @@ html.dark {
   --nav-btn-bg-color: #18181b44;
   --body-bg: #18181b;
   --footer-bg: #0e0e10;
+  --menu-bg-color: #18181b;
 }
 
 * {
@@ -492,7 +496,7 @@ section.credits ul li a:hover {
   right: 0;
   top: 0;
   padding: 5.1rem;
-  background-color: var(--text-color);
+  background-color: var(--menu-bg-color);
   transform: translateX(150%);
   transition: transform 0.5s ease;
 }
@@ -506,7 +510,7 @@ section.credits ul li a:hover {
 }
 
 .menu h2 {
-  color: var(--white);
+  color: var(--menu-text-color);
   font-size: 2.05rem;
   font-weight: 900;
   letter-spacing: 0.71rem;
@@ -519,7 +523,7 @@ section.credits ul li a:hover {
 }
 
 .menu ul li a {
-  color: var(--white);
+  color: var(--menu-text-color);
   padding: 1.85rem 0;
   font-size: 1.9rem;
   display: block;
