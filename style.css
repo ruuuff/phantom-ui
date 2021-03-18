@@ -6,11 +6,14 @@
   font-size: 62.5%;
 
   --white: #fff;
+  --white08opacity: rgba(255, 255, 255, 0.8);
   --gray: rgb(88, 88, 88);
   --gray03opacity: rgba(88, 88, 88, 0.3);
   --gray05opacity: rgba(88, 88, 88, 0.5);
+  --gray015opacity: rgba(255, 255, 255, 0.15);
   --pink: #f2849e;
   --text-color: #585858;
+  --nav-btn-bg-color: rgba(255, 255, 255, 0.4);
   --body-bg: rgba(255, 255, 255, 1);
   --footer-bg: rgba(246, 246, 246, 1);
 
@@ -21,6 +24,24 @@
   --color4: #1de4ec99;
   --color5: #29036699;
   --color6: #f8267799;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  --white: #000;
+  --white08opacity: rgba(0, 0, 0, 0.8);
+  --gray: #e2e2e4;
+  --gray03opacity: rgba(255, 255, 255, 0.3);
+  --gray05opacity: rgba(255, 255, 255, 0.5);
+  --gray015opacity: rgba(0, 0, 0, 0.25);
+  --text-color: #ccc;
+
+  --nav-btn-bg-color: #18181b44;
+  --body-bg: #18181b;
+  --footer-bg: #0e0e10;
 }
 
 * {
@@ -69,7 +90,7 @@ a.anchor-border-bottom:hover::after {
 
 /* ===== NAV ===== */
 nav {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--nav-btn-bg-color);
   border-radius: 0.4rem;
   position: fixed;
   top: 3.7rem;
@@ -116,7 +137,7 @@ nav a:hover {
   color: var(--pink);
 }
 
-.logo img {
+.logo svg {
   width: 3.8rem;
   height: 3.8rem;
   margin-right: 1.4rem;
@@ -458,7 +479,7 @@ section.credits ul li a:hover {
 }
 
 #menu-overlay.show {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--white08opacity);
   opacity: 1;
   visibility: visible;
 }
@@ -494,7 +515,7 @@ section.credits ul li a:hover {
 }
 
 .menu ul li + li {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid var(--gray015opacity);
 }
 
 .menu ul li a {
@@ -507,6 +528,10 @@ section.credits ul li a:hover {
 
 .menu ul li a:hover {
   color: var(--pink);
+}
+
+.menu ul li a i {
+  margin-left: 0.5rem;
 }
 
 .menu > a {
