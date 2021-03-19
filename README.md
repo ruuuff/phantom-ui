@@ -1,6 +1,6 @@
 ## ⚙️ Projeto
 
-Esta aplicação é uma reprodução da homepage <a href="https://html5up.net/uploads/demos/phantom/">Phantom</a>, com a adição de um tema escuro para a página.
+Esta aplicação é uma reprodução da homepage <a href="https://html5up.net/uploads/demos/phantom/">Phantom</a>, com o incremento de um tema escuro para a página.
 
 ## ✈️ Tecnologias
 
