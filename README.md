@@ -12,5 +12,5 @@ Esta aplicação é uma reprodução da homepage <a href="https://html5up.net/up
 
 <div align="center">
   <img alt="Phantom" src="https://i.imgur.com/78ehVq7.png" width="450px"> 
-  <p>Confira o resultado: <a href="https://phantom-homepage-clone-ruuuff.netlify.app">Phantom Clone</a></p>
+  <p>Confira o resultado: <a href="https://phantom-ui-ruuuff.netlify.app/">Phantom Clone</a></p>
 </div>
