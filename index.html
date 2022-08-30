@@ -1,232 +1,355 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Clone da homepage Phantom, por RuuuFF">
-  <meta name="author" content="Carlos Daniel (RuuuFF)">
-  <meta name="robots" content="index,nofollow">
+    <meta name="description" content="Clone da homepage Phantom, por RuuuFF" />
+    <meta name="author" content="Carlos Daniel (RuuuFF)" />
+    <meta name="robots" content="index,nofollow" />
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="./images/icon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./images/icon.svg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
 
-  <title>Phantom</title>
-</head>
-<body>
+    <title>Phantom</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="fas fa-bars" onclick="toggleMenu(event)"></a>
+        </li>
+      </ul>
+    </nav>
 
-  <nav>
-    <ul>
-      <li>
-        <a href="#" class="fas fa-bars" onclick="toggleMenu(event)"></a>
-      </li>
-    </ul>
-  </nav>
-
-  <header id="header">
-    <div class="container">
-      <div class="logo">
-        <a href="#">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="149.167px" height="172.243px" viewBox="0 0 149.167 172.243" enable-background="new 0 0 149.167 172.243"
-          xml:space="preserve">
-            <polygon fill="#585858" points="149.167,129.183 74.583,172.243 0,129.183 0,43.061 74.583,0 149.167,43.061 "/>
-            <path fill="#FFFFFF" d="M41.88,84.75l25.09,26.783L54.889,84.75H41.88z M74.583,115.841L88.64,84.75H60.527L74.583,115.841zM55.009,79.594l8.217-15.466H52.673l-11.6,15.466H55.009z M82.196,111.533l25.091-26.783h-13.01L82.196,111.533z M60.849,79.594h27.469l-8.217-15.466H69.065L60.849,79.594z M94.157,79.594h13.936L96.494,64.128H85.942L94.157,79.594z M99.835,60.02l15.467,20.621c0.376,0.483,0.55,1.04,0.523,1.671c-0.027,0.632-0.257,1.174-0.686,1.632l-38.664,41.243c-0.483,0.536-1.113,0.804-1.893,0.804c-0.778,0-1.408-0.268-1.892-0.804L34.026,83.944c-0.429-0.457-0.658-1-0.685-1.632c-0.027-0.631,0.147-1.188,0.523-1.671L49.331,60.02c0.484-0.699,1.168-1.047,2.054-1.047h46.398C98.667,58.973,99.353,59.322,99.835,60.02z"/>
-          </svg>
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#">
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="149.167px"
+              height="172.243px"
+              viewBox="0 0 149.167 172.243"
+              enable-background="new 0 0 149.167 172.243"
+              xml:space="preserve"
+            >
+              <polygon
+                fill="#585858"
+                points="149.167,129.183 74.583,172.243 0,129.183 0,43.061 74.583,0 149.167,43.061 "
+              />
+              <path
+                fill="#FFFFFF"
+                d="M41.88,84.75l25.09,26.783L54.889,84.75H41.88z M74.583,115.841L88.64,84.75H60.527L74.583,115.841zM55.009,79.594l8.217-15.466H52.673l-11.6,15.466H55.009z M82.196,111.533l25.091-26.783h-13.01L82.196,111.533z M60.849,79.594h27.469l-8.217-15.466H69.065L60.849,79.594z M94.157,79.594h13.936L96.494,64.128H85.942L94.157,79.594z M99.835,60.02l15.467,20.621c0.376,0.483,0.55,1.04,0.523,1.671c-0.027,0.632-0.257,1.174-0.686,1.632l-38.664,41.243c-0.483,0.536-1.113,0.804-1.893,0.804c-0.778,0-1.408-0.268-1.892-0.804L34.026,83.944c-0.429-0.457-0.658-1-0.685-1.632c-0.027-0.631,0.147-1.188,0.523-1.671L49.331,60.02c0.484-0.699,1.168-1.047,2.054-1.047h46.398C98.667,58.973,99.353,59.322,99.835,60.02z"
+              />
+            </svg>
             PHANTOM
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div class="container">
-      <header>
-        <h1>This is Phantom, another clone by <a href="#" class="anchor-border-bottom">RuuuFF</a>.</h1>
-        <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
-      </header>
+    <main>
+      <div class="container">
+        <header>
+          <h1>
+            This is Phantom, another clone by
+            <a href="#" class="anchor-border-bottom">RuuuFF</a>.
+          </h1>
+          <p>
+            Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit
+            amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis
+            venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem
+            ipsum dolor sit amet nullam dolore.
+          </p>
+        </header>
 
-      <section class="grid">
-        <article style="background-image: url('https://www.github.com/ruuuff.png');">
-          <div class="background color1">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+        <section class="grid">
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba');
+            "
+          >
+            <div class="background color1">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1525382455947-f319bc05fb35?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=514&q=80');">
-          <div class="background color2">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1525382455947-f319bc05fb35');
+            "
+          >
+            <div class="background color2">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1500479694472-551d1fb6258d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');">
-          <div class="background color3">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1500479694472-551d1fb6258d');
+            "
+          >
+            <div class="background color3">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1486578077620-8a022ddd481f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=667&q=80');">
-          <div class="background color4">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1486578077620-8a022ddd481f');
+            "
+          >
+            <div class="background color4">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1518887499460-71d222eed89d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');">
-          <div class="background color5">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1518887499460-71d222eed89d');
+            "
+          >
+            <div class="background color5">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1585256262155-c044dc6ad38e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');">
-          <div class="background color6">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1585256262155-c044dc6ad38e');
+            "
+          >
+            <div class="background color6">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1518713337836-f828c91becc0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');">
-          <div class="background color3">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1518713337836-f828c91becc0');
+            "
+          >
+            <div class="background color3">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1601731191916-b73ec741f582?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=501&q=80');">
-          <div class="background color2">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1601731191916-b73ec741f582');
+            "
+          >
+            <div class="background color2">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1602167130052-215c677d99b0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');">
-          <div class="background color5">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1602167130052-215c677d99b0');
+            "
+          >
+            <div class="background color5">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1588057078850-c7853b9188f8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');">
-          <div class="background color1">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1588057078850-c7853b9188f8');
+            "
+          >
+            <div class="background color1">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1550853024-fae8cd4be47f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=507&q=80');">
-          <div class="background color4">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1550853024-fae8cd4be47f');
+            "
+          >
+            <div class="background color4">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
 
-        <article style="background-image: url('https://images.unsplash.com/photo-1603013032833-58c2d9f875b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=542&q=80');">
-          <div class="background color6">
-            <h2>Image</h2>
-            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-          </div>
-        </article>
-      </section>
-    </div>
-  </main>
+          <article
+            style="
+              background-image: url('https://images.unsplash.com/photo-1603013032833-58c2d9f875b4');
+            "
+          >
+            <div class="background color6">
+              <h2>Image</h2>
+              <p>
+                Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros
+                et feugiat.
+              </p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
 
-  <footer>
-    <div class="container">
-      <section class="form" id="contact">
-        <h2>Get in touch</h2>
-        <form>
-          <div class="double-input">
-            <div class="input-field ">
-              <input type="text" placeholder="Name" class="input-focus">
+    <footer>
+      <div class="container">
+        <section class="form" id="contact">
+          <h2>Get in touch</h2>
+          <form>
+            <div class="double-input">
+              <div class="input-field">
+                <input type="text" placeholder="Name" class="input-focus" />
+                <div class="line-focus"></div>
+              </div>
+
+              <div class="input-field">
+                <input type="email" placeholder="Email" class="input-focus" />
+                <div class="line-focus"></div>
+              </div>
+            </div>
+
+            <div class="textarea-field">
+              <textarea
+                name="Message"
+                rows="1"
+                placeholder="Message"
+                class="input-focus"
+              ></textarea>
               <div class="line-focus"></div>
             </div>
 
-            <div class="input-field ">
-              <input type="email" placeholder="Email" class="input-focus">
-              <div class="line-focus"></div>
+            <div class="button-field">
+              <button type="button">Send</button>
             </div>
-          </div>
+          </form>
+        </section>
 
-          <div class="textarea-field">
-            <textarea name="Message" rows="1" placeholder="Message" class="input-focus"></textarea>
-            <div class="line-focus"></div>
-          </div>
+        <section class="social" id="socials">
+          <h2>Follow</h2>
+          <ul>
+            <li>
+              <a href="#" class="fab fa-twitter"></a>
+            </li>
+            <li>
+              <a href="#" class="fab fa-facebook-f"></a>
+            </li>
+            <li>
+              <a href="#" class="fab fa-instagram"></a>
+            </li>
+            <li>
+              <a href="#" class="fab fa-github"></a>
+            </li>
+            <li>
+              <a href="#" class="fab fa-linkedin-in"></a>
+            </li>
+            <li>
+              <a href="#" class="fas fa-phone"></a>
+            </li>
+            <li>
+              <a href="#" class="fas fa-envelope"></a>
+            </li>
+          </ul>
+        </section>
 
-          <div class="button-field">
-            <button type="button">Send</button>
-          </div>
-        </form>
-      </section>
+        <section class="credits">
+          <ul>
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>
+              Design: <a href="#" class="anchor-border-bottom">HTML5UP</a>
+            </li>
+            <li>
+              Demo Images: <a href="#" class="anchor-border-bottom">Unsplash</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
 
-      <section class="social" id="socials">
-        <h2>Follow</h2>
-        <ul>
-          <li>
-            <a href="#" class="fab fa-twitter"></a>
-          </li>
-          <li>
-            <a href="#" class="fab fa-facebook-f"></a>
-          </li>
-          <li>
-            <a href="#" class="fab fa-instagram"></a>
-          </li>
-          <li>
-            <a href="#" class="fab fa-github"></a>
-          </li>
-          <li>
-            <a href="#" class="fab fa-linkedin-in"></a>
-          </li>
-          <li>
-            <a href="#" class="fas fa-phone"></a>
-          </li>
-          <li>
-            <a href="#" class="fas fa-envelope"></a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="credits">
-        <ul>
-          <li>&copy; Untitled. All rights reserved</li>
-          <li>Design: <a href="#" class="anchor-border-bottom">HTML5UP</a></li>
-          <li>Demo Images: <a href="#" class="anchor-border-bottom">Unsplash</a></li>
-        </ul>
-      </section>
-    </div>
-  </footer>
-
-  <div id="menu-overlay">
-    <div class="menu-container">
-      <div class="menu">
-        <h2>Menu</h2>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#socials">Socials</a>
-          </li>
-          <li>
-            <a id="theme" href="#" onclick="changeTheme(event)">Theme <i class="fas fa-sun"></i></a>
-          </li>
-        </ul>
-        <a href="#" class="fas fa-times" onclick="toggleMenu(event)"><span>Close</span></a>
+    <div id="menu-overlay">
+      <div class="menu-container">
+        <div class="menu">
+          <h2>Menu</h2>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#socials">Socials</a>
+            </li>
+            <li>
+              <a id="theme" href="#" onclick="changeTheme(event)"
+                >Theme <i class="fas fa-sun"></i
+              ></a>
+            </li>
+          </ul>
+          <a href="#" class="fas fa-times" onclick="toggleMenu(event)"
+            ><span>Close</span></a
+          >
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="./scripts.js"></script>
-</body>
+    <script src="./scripts.js"></script>
+  </body>
 </html>
