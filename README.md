@@ -1,5 +1,5 @@
 # 📚 Phantom UI
-Reprodução da página <a href="https://html5up.net/uploads/demos/phantom/">Phantom</a> com o objetivo de praticar minhas habilidades em HTML, CSS, JavaScript e Design Responsivo. Possui a implementação de um tema escuro dinâmico utilizando variáveis CSS.
+UI Clone da página <a href="https://html5up.net/uploads/demos/phantom/">Phantom</a> com o objetivo de praticar minhas habilidades em HTML, CSS, JavaScript e Design Responsivo. Possui a implementação de um tema escuro dinâmico utilizando variáveis CSS.
 
 ## ✈️ Tecnologias
 - HTML
